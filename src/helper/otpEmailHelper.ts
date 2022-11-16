@@ -106,7 +106,7 @@ class EmailOTPModule {
         const objstr = await this.redisClient.get(email);
         const obj = JSON.parse(objstr);
         if (!obj) {
-            throw new HttpException(STATUS_EMAIL_FAIL, `Email  does not exist.`);
+            throw new HttpException(STATUS_EMAIL_FAIL, `Email does not exist.`);
         } else {
             if (obj.expired_At < new Date().getTime()) {
                 this.close(email);

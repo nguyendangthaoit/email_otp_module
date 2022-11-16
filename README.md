@@ -13,23 +13,23 @@ EMAIL_PASS = ""
 # to start
 
 # run redis docker
-1,run to get image redis docker: 
-docker pull redis
-2, run create a redis container:
-docker run -d --name otpRedis -p 127.0.0.2:6379:6379 redis
-3 ,run if there is a image redis then it is finished
-docker ps -a
+1,run to get image redis docker:<br /> 
+docker pull redis<br />
+2, run create a redis container:<br />
+docker run -d --name otpRedis -p 127.0.0.2:6379:6379 redis<br />
+3 ,run if there is a image redis then it is finished<br />
+docker ps -a<br />
 
 
-# project
-1, run to install module
-npm i
-2, run to project
-npm run dev
+# project<br />
+1, run to install module<br />
+npm i<br />
+2, run to project<br />
+npm run dev<br />
 
 
-# test otp module
-1,run api to get otp.
-http://127.0.0.1:3333/api/v1/account/generateOtpEmail?email=demo@dso.org.sg
-2, run api to check otp 
-http://127.0.0.1:3333/api/v1/account/checkOtp?email=email=demo@dso.org.sg&otp=874425
+# test otp module<br />
+1,run api to get otp.<br />
+http://127.0.0.1:3333/api/v1/account/generateOtpEmail?email=demo@dso.org.sg<br />
+2, run api to check otp <br />
+http://127.0.0.1:3333/api/v1/account/checkOtp?email=email=demo@dso.org.sg&otp=874425<br />
