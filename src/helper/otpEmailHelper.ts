@@ -5,7 +5,7 @@
 // 2. Do document any assumptions that you make.
 // 3. Describe how you would test your module.
 
-import { EMAIL_SENT_OTP_SUBJECT, STATUS_EMAIL_FAIL, STATUS_EMAIL_INVALID, STATUS_OTP_FAIL, STATUS_OTP_TIMEOUT } from "../utils/constans";
+import { EMAIL_SENT_OTP_SUBJECT, EMAIL_VALID, STATUS_EMAIL_FAIL, STATUS_EMAIL_INVALID, STATUS_OTP_FAIL, STATUS_OTP_TIMEOUT } from "../utils/constans";
 import HttpException from '../exceptions/httpException';
 import { SendEmailHelper } from "./sendEmailHelper";
 import * as bcrypt from 'bcrypt';
@@ -47,9 +47,9 @@ class EmailOTPModule {
     STATUS_EMAIL_INVALID: email address is invalid.
     */
     async generateOTPEmail(email: string) {
-        // if (!email || !email.endsWith('dso.org.sg')) {
-        //     throw new HttpException(STATUS_EMAIL_INVALID, `Email address is invalid.`);
-        // }
+        if (!email || !email.endsWith(EMAIL_VALID)) {
+            throw new HttpException(STATUS_EMAIL_INVALID, `Email address is invalid.`);
+        }
         const otp = this.generateOtp();
         const hashedOtp = await bcrypt.hash(otp.toString(), 10);
         await this.sendEmail(email, otp);

@@ -1,5 +1,6 @@
 //Email
 export const EMAIL_SENT_OTP_SUBJECT = 'Verify your OTP';
+export const EMAIL_VALID = 'dso.org.sg';
 
 export const STATUS_EMAIL_OK = 200;
 export const STATUS_EMAIL_FAIL = 404;
