@@ -11,9 +11,10 @@ EMAIL_PASS = ""
 
 
 # to start
+required nodejs and docker
 
 # run redis docker
-1,run to get image redis docker:<br /> 
+1,run to get redis docker image:<br /> 
 docker pull redis<br />
 2, run create a redis container:<br />
 docker run -d --name otpRedis -p 127.0.0.2:6379:6379 redis<br />
