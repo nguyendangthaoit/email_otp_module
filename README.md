@@ -32,4 +32,4 @@ npm run dev<br />
 1,run api to get otp.<br />
 http://127.0.0.1:3333/api/v1/account/generateOtpEmail?email=demo@dso.org.sg<br />
 2, run api to check otp <br />
-http://127.0.0.1:3333/api/v1/account/checkOtp?email=email=demo@dso.org.sg&otp=874425<br />
+http://127.0.0.1:3333/api/v1/account/checkOtp?email=demo@dso.org.sg&otp=874425<br />
